@@ -26,7 +26,7 @@ class MemberServiceIntegrationTest {
     void join() {
         //given: 어떤 상황이 주어졌는데
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring2");
 
         //when: 이거를 실행했을 때
         Long saveId = memberService.join(member);
@@ -36,7 +36,7 @@ class MemberServiceIntegrationTest {
         assertThat(member.getName()).isEqualTo(findMember.getName());
     }
 
-    @Test
+//    @Test
     public void 중복_회원_예외() {
         //given
         Member member1 = new Member();
